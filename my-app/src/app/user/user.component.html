@@ -1,0 +1,24 @@
+<div class="container">
+  <table class="table">
+    <thead >
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Full Name</th>
+        <th scope="col">Username</th>
+        <th scope="col">Email</th>
+        <th scope="col">Link</th>
+      </tr>
+    </thead>
+    <tbody><!--<a href="" class="btn btn-primary" [routerLink]="['/article', article.id]">Go to the post</a>-->
+      <tr *ngFor="let user of users">
+        <th scope="row" class="text-light bg-dark">{{ user.id }}</th>
+        <td class="text-light bg-dark">{{ user.name }}</td>
+        <td class="text-light bg-dark">{{ user.username }}</td>
+        <td class="text-light bg-dark">{{ user.email }}</td>
+        <td class="text-light bg-dark"><a href="" class="btn btn-primary" [routerLink]="['/usersummary', user.id]">
+          <img src="https://cdn1.iconfinder.com/data/icons/mix-color-4/502/Untitled-1-512.png" alt="">
+      </a></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>

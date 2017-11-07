@@ -1,0 +1,21 @@
+.artImg{
+    height: 15rem;
+}
+.card{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+@media (min-width: 900px){
+    .container{
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.card-body{
+    border: 0.3rem solid black;
+}
+img{
+    border: 0.3rem solid black;
+}

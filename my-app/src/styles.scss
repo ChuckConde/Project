@@ -1,0 +1,14 @@
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+body{
+    background-color: rgb(207, 207, 207);
+    font-family: 'Ubuntu', sans-serif;
+}
+.card-header {
+    background-color: #343a40 !important;
+    text-decoration-color: white !important; 
+}
+.card-body{
+    background-color: rgb(207, 207, 207);
+    border: 0.2rem solid #343a40 ;
+}

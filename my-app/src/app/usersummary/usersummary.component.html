@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row">
+    <div class="user" *ngIf="users">
+        <ul class="list-group ">
+          <h2>Personal Data</h2>
+        <li class="list-group-item text-light bg-dark">ID: {{users.id}}</li>
+        <li class="list-group-item text-light bg-dark">UserName: {{users.username}}</li>
+        <li class="list-group-item text-light bg-dark">Email: {{users.email}}</li>
+        <li class="list-group-item text-light bg-dark">Phone: {{users.phone}}</li>
+        <li class="list-group-item text-light bg-dark">Website: {{users.website}}</li>
+
+      </ul>
+      <hr>
+      <h2>Address</h2>
+      <ul class="list-group">
+        <li class="list-group-item text-light bg-dark">Street: {{users.address.street}}</li>
+        <li class="list-group-item text-light bg-dark">Number: {{users.address.suite}}</li>
+        <li class="list-group-item text-light bg-dark">City: {{users.address.city }}</li>
+        <li class="list-group-item text-light bg-dark">Zipcode: {{users.address.zipcode}}</li>
+        <li class="list-group-item text-light bg-dark">Geo-Lat: {{users.address.geo.lat}}</li>
+        <li class="list-group-item text-light bg-dark">Geo-Long: {{users.address.geo.lng}}</li>
+      </ul>
+      <hr>
+      <h2>Company</h2>
+      <ul class="list-group">
+        <li class="list-group-item text-light bg-dark">Name: {{users.company.name }}</li>
+        <li class="list-group-item text-light bg-dark">Catch Phrase: {{users.company.catchPhrase}}</li>
+        <li class="list-group-item text-light bg-dark">BS: {{users.company.bs}}</li>
+      </ul>
+    </div>
+
+    <div class="nouser" *ngIf="!users">
+      Post no encontrado!
+    </div>
+    </div>
+    </div>

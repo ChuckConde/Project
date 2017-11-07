@@ -1,0 +1,20 @@
+<div class="container">
+<div class="card" style="width: 18rem;" *ngFor="let article of articles | paginate: { itemsPerPage: 15, currentPage: p }  ">
+    <img class="card-img-top artImg" src="http://68.media.tumblr.com/7bc7e29b904cdc26b29d9d206fe5be2f/tumblr_nlh8fl8SzR1u0125do1_1280.jpg" alt="Card image cap">
+    <div class="card-body text-light bg-dark">
+      <h4 class="card-title">{{article.id}} - {{article.title}}</h4>
+      <p class="card-text ">Example of the article body</p>
+      <a href="" class="btn btn-primary" [routerLink]="['/article', article.id]">Go to the post</a>
+    </div>
+    <div *ngIf="!articles.length">
+      <p>
+        No hay posts disponibles
+      </p>
+    </div>
+  </div>
+  <div class="container">
+      <ngb-pagination [collectionSize]="70" [(page)]="p" aria-label="Default pagination" ></ngb-pagination>
+      
+      </div>
+</div>
+

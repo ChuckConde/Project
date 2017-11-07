@@ -1,0 +1,79 @@
+<div class="container">
+<h1>Lorem Ipsum</h1>
+<hr>
+<div class="info">
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas recusandae quod quo quibusdam similique hic eos dolores non,
+  at quisquam necessitatibus doloribus repellendus eaque perspiciatis, molestias minus nam mollitia? Soluta! </p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas recusandae quod quo quibusdam similique hic eos dolores non,
+  at quisquam necessitatibus doloribus repellendus eaque perspiciatis, molestias minus nam mollitia? Soluta! </p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas recusandae quod quo quibusdam similique hic eos dolores non,
+  at quisquam necessitatibus doloribus repellendus eaque perspiciatis, molestias minus nam mollitia? Soluta! </p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas recusandae quod quo quibusdam similique hic eos dolores non,
+  at quisquam necessitatibus doloribus repellendus eaque perspiciatis, molestias minus nam mollitia? Soluta! </p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas recusandae quod quo quibusdam similique hic eos dolores non,
+  at quisquam necessitatibus doloribus repellendus eaque perspiciatis, molestias minus nam mollitia? Soluta! </p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas recusandae quod quo quibusdam similique hic eos dolores non,
+  at quisquam necessitatibus doloribus repellendus eaque perspiciatis, molestias minus nam mollitia? Soluta! </p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas recusandae quod quo quibusdam similique hic eos dolores non,
+  at quisquam necessitatibus doloribus repellendus eaque perspiciatis, molestias minus nam mollitia? Soluta! </p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas recusandae quod quo quibusdam similique hic eos dolores non,
+  at quisquam necessitatibus doloribus repellendus eaque perspiciatis, molestias minus nam mollitia? Soluta! </p>
+</div>
+
+<div class="banner">
+  <img src="http://client-cdn.crystalcommerce.com/photo/socalgamesandcomics/file/1275713/splashBanner_magic.jpg?1490201407"
+    alt="banner of gods">
+
+</div>
+
+<div class="container">
+  <section class="greeting">
+    <h2>We Want to hear from you!</h2>
+  </section>
+</div>
+<form >
+  <div class="form-row">
+    <div class="form-group col-md-6 mb-3">
+      <label for="inputName">*Full Name</label>
+      <input type="text" class="form-control" id="inputName" placeholder="Full name" value="" 
+      [(ngModel)]="user.name"
+      name="name"
+      #userName="ngModel"
+      minlength="3"
+      required>
+    </div>
+    <div *ngIf="userName.errors?.required && userName.touched" class="alert alert-danger">Full Name is required</div>
+    <div *ngIf="userName.errors?.minlength && userName.touched" class="alert alert-danger">Full Name should be at least 3 characters</div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6 mb-3">
+      <label for="inputEmai">*Email</label>
+      <input type="email" class="form-control" id="inputEmai" placeholder="Email" 
+      [(ngModel)]="user.email"
+      name="email"
+      #userEmail="ngModel"
+      required email>
+    </div>
+    <div *ngIf="userEmail.errors?.email && userEmail.touched" class="alert alert-danger">A valid email is required</div>
+    </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-6 mb-3">
+      <label for="inputSubject">*Subject</label>
+      <input type="subject" class="form-control" id="inputSubject" placeholder="Subject" 
+      [(ngModel)]="user.subject"
+      name="subject"
+      #userSubject="ngModel"
+      minlength="3"
+      required>
+    </div>
+    <div *ngIf="userSubject.errors?.required && userSubject.touched" class="alert alert-danger">Subject has to be atleast 3 characters long</div>
+</div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Message</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Message" required></textarea>
+  </div>
+  <button class="btn btn-dark" type="submit">Submit</button>
+  <button class="btn btn-info" type="reset">Reset</button>
+</form>
+</div>
